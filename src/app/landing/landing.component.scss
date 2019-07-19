@@ -1,0 +1,82 @@
+$start-color: lightblue;
+$end-color: white;
+
+.app-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+
+    background-color: white;
+
+    .logo-button {
+        background-color: black;
+        height: 6rem;
+
+        img {
+            height: 4rem;
+        }
+    }
+}
+
+.app-sidebar {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    bottom: 0;
+
+    width: 5rem;
+
+}
+
+.landing-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    height: 100vh;
+    background-size: cover;
+    background: linear-gradient(to bottom, rgba($start-color, .95), rgba($end-color, .95));
+}
+
+.main-content {
+    position: relative;
+}
+
+.announcement {
+    font-size: 14pt;
+}
+
+.welcome-container {
+    position: relative;
+
+    .welcome-message {
+        font-size: 32pt;
+    }
+    
+    .see-our-products {
+        margin-top: 20rem;
+        color: #35c4c4;
+        font-size: 22;
+        width: 40rem;
+    }
+}
+
+
+
+.year {
+    margin-top: 30rem;
+    font-size: 18pt;
+
+    &.grayed-out {
+        color: lightgray;
+    }
+}
+
+.apple-logo {
+    height: 12rem;
+}
+
