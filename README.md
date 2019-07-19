@@ -1,5 +1,28 @@
 # DwApp
 
+### Some context in order to review the project:
+
+Even though the architecture for this angular project is not ready for big applications. It has some basic architecture concepts in it.
+
+First, some base packages were installed and added to the application:
+
+- Angular FlexLayout: https://github.com/angular/flex-layout
+
+This module is used for layout purposes and it uses CSS flex layout under the hood.
+
+- Angular Material: https://material.angular.io/
+
+Library developed by the angular team that offer components, directives and standard platform to build applications that use the Material Design guidelines.
+
+- CSS (base) Architecture
+
+Under the folder (src/styles) there is basic a basic CSS architecture in palace grouped into two folders (abstract and base) these files contain some basic mixins and styles that can be used as foundation for any application.
+
+In addition, the style.scss files contains the basis to support site themes through the Angular Material library (https://material.angular.io/) 
+
+Please let me know if you need any clarification about the source code.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## Development server
