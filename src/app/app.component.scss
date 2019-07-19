@@ -1,0 +1,17 @@
+$size: 6.4rem;
+
+.menu {
+    background-color: black;
+    width: $size;
+    height: $size;
+    margin-left: -1.6rem;
+
+    &--main-button {
+        margin: 1rem;
+        width: $size - 2rem;
+    }
+}
+
+mat-sidenav {
+    width: $size;
+}

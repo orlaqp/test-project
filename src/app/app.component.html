@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<ng-container *ngIf="state$ | async as state">
+
+    <mat-toolbar *ngIf="state.appMode">
+        <div class="menu">
+            <img class="menu--main-button" src="/assets/images/apple-logo-white.png" alt="">
+        </div>
+    </mat-toolbar>
+    
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav mode="side" [opened]="state.appMode">Sidenav</mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    
+</ng-container>
+

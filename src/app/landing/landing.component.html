@@ -1,31 +1,31 @@
-<div class="landing-background" fxLayout="column" fxLayoutAlign="center center">
-    <img fxFlex="initial" class="apple-logo" src="/assets/images/Black Watch-1.png" alt="">
-</div>
+<ng-container *ngIf="state$ | async as state">
 
-<div class="app-header" *ngIf="showWelcome" fxLayout="row">
-    <div fxFlex="initial" class="logo-button">
-        <img src="/assets/images/apple-logo-png-3" alt="">
-    </div>
-    <div fxFlex>
-        header
-    </div>
-</div>
+        <div class="landing-container" [class.app-mode]="state.appMode" fxLayout="column" fxLayoutAlign="center center">
+            <img class="landing-container--apple-logo" src="/assets/images/apple-light-logo.png" alt="">
+            <div fxFlex>&nbsp;</div>
+            <div class="mat-display-1 p-relative" fxFlex="initial">New Products coming this summer</div>
+            <span fxFlex class='numscroller landing-container--year' data-min='1' data-max='2019' data-delay='5' data-increment='50'>2019</span>
+            
+        </div>
+            
+            <!-- <div class="main-content" fxLayout="column" fxLayoutAlign="center center" (click)="contentClicked()">
+                <div fxFlex>&nbsp;</div>
+                <div *ngIf="!showWelcome" fxFlex="initial" class="announcement">
+                    New Products coming this summer
+                </div>
+            
+                <div *ngIf="showWelcome" fxFlex="40px" class="welcome-container animated fadeIn">
+                    <div class="welcome-message">Welcome to Apple</div>
+                    <div class="see-our-products text-center">See our products</div>
+                </div>
+            
+                <div fxFlex class="year" [class.grayed-out]="showWelcome">
+                    2019
+                </div>
+            </div> -->
+            
+            
 
-<div class="app-sidebar" *ngIf="showWelcome"></div>
+</ng-container>
 
-<div class="main-content vh-100" fxLayout="column" fxLayoutAlign="center center" (click)="contentClicked()">
-    <div fxFlex>&nbsp;</div>
-    <div *ngIf="!showWelcome" fxFlex="initial" class="announcement">
-        New Products coming this summer
-    </div>
-
-    <div *ngIf="showWelcome" fxFlex="40px" class="welcome-container animated fadeIn">
-        <div class="welcome-message">Welcome to Apple</div>
-        <div class="see-our-products text-center">See our products</div>
-    </div>
-
-    <div fxFlex class="year" [class.grayed-out]="showWelcome">
-        2019
-    </div>
-</div>
 
