@@ -1,8 +1,18 @@
 <ng-container *ngIf="state$ | async as state">
 
     <mat-toolbar *ngIf="state.appMode" class="animated fadeInDown">
-        <div class="menu">
-            <img class="menu--main-button" src="/assets/images/apple-logo-white.png" alt="">
+        <div fxLayout="row" class="w-100">
+            <div fxFlex="initial" class="menu">
+                <img class="menu--main-button" src="/assets/images/apple-logo-white.png" alt="">
+            </div>
+
+            <div fxFlex fxLayout="row-reverse" fxLayoutAlign="start center" fxLayoutGap="2rem" class="item">
+                <div fxFlex="initial" class="blue-button">Notify Me</div>
+                <div fxFlex="initial">Watch</div>
+                <div fxFlex="initial">MacBook Pro</div>
+                <div fxFlex="initial">iPhone</div>
+            </div>
+
         </div>
     </mat-toolbar>
     

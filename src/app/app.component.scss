@@ -10,6 +10,10 @@ $size: 6.4rem;
         margin: 1rem;
         width: $size - 2rem;
     }
+
+    .item {
+        font-weight: normal;
+    }
 }
 
 mat-sidenav {
