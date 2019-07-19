@@ -12,13 +12,13 @@ export class LandingComponent implements OnInit {
   state$: Observable<IAppState>;
   showWelcome = false;
 
-  constructor(store: Store) {
+  constructor(private store: Store) {
       this.state$ = store.getState();
   }
 
   ngOnInit() {}
 
-  contentClicked() {
-    this.showWelcome = true;
+  switchToAppMode() {
+    this.store.enableAppMode();
   }
 }

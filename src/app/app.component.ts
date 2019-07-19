@@ -12,10 +12,6 @@ export class AppComponent {
 
     constructor(store: Store) {
         this.state$ = store.getState();
-
-        setTimeout(() => {
-            store.enableAppMode();
-        }, 1000);
     }
 
 

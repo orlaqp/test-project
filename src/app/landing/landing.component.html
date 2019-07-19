@@ -1,12 +1,15 @@
 <ng-container *ngIf="state$ | async as state">
 
-        <div class="landing-container" [class.app-mode]="state.appMode" fxLayout="column" fxLayoutAlign="center center">
-            <img class="landing-container--apple-logo" src="/assets/images/apple-light-logo.png" alt="">
+        <div class="landing-container" [class.app-mode]="state.appMode" fxLayout="column" fxLayoutAlign="center center" (click)="switchToAppMode()">
+            <img  class="landing-container--apple-logo" src="/assets/images/apple-light-logo.png" alt="">
             <div fxFlex>&nbsp;</div>
-            <div class="mat-display-1 p-relative" fxFlex="initial">New Products coming this summer</div>
+            <div *ngIf="!state.appMode" class="mat-display-1 p-relative" fxFlex="initial">New Products coming this summer</div>
             <span fxFlex class='numscroller landing-container--year' data-min='1' data-max='2019' data-delay='5' data-increment='50'>2019</span>
-            
         </div>
+        
+        <app-welcome class="overlay" *ngIf="state.appMode">
+            
+        </app-welcome>
             
             <!-- <div class="main-content" fxLayout="column" fxLayoutAlign="center center" (click)="contentClicked()">
                 <div fxFlex>&nbsp;</div>
