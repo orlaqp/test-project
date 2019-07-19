@@ -7,28 +7,8 @@
             <span fxFlex class='numscroller landing-container--year' data-min='1' data-max='2019' data-delay='5' data-increment='50'>2019</span>
         </div>
         
-        <app-welcome class="overlay" *ngIf="state.appMode">
-            
-        </app-welcome>
-            
-            <!-- <div class="main-content" fxLayout="column" fxLayoutAlign="center center" (click)="contentClicked()">
-                <div fxFlex>&nbsp;</div>
-                <div *ngIf="!showWelcome" fxFlex="initial" class="announcement">
-                    New Products coming this summer
-                </div>
-            
-                <div *ngIf="showWelcome" fxFlex="40px" class="welcome-container animated fadeIn">
-                    <div class="welcome-message">Welcome to Apple</div>
-                    <div class="see-our-products text-center">See our products</div>
-                </div>
-            
-                <div fxFlex class="year" [class.grayed-out]="showWelcome">
-                    2019
-                </div>
-            </div> -->
-            
-            
-
+        <app-welcome class="overlay" *ngIf="state.appMode"></app-welcome>
+      
 </ng-container>
 
 
